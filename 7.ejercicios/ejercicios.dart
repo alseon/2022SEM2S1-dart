@@ -33,3 +33,34 @@ List compararListas(List<int?> l1,List<int?> l2){
   //l3 = l3.fold<Set>(l3.toSet(),(a,b) => a.intersection(b.toSet()));
   return l3;
 }
+//punto 3 palindromo
+
+void main() {
+  var a = "anita lava la tina";
+  print(esPalindromo(a));
+}
+
+bool esPalindromo(String texto){
+  String texto_sin_esp = texto.replaceAll(" ","");
+  String texto_inv = texto_sin_esp.split('').reversed.join();
+  if (texto_inv == texto_sin_esp){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+//punto 4 conjunto pares
+
+void main() {
+  List<int> lista = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];
+  List<int>? pares=[];
+  for(int i = 0; i < lista.length; i++){
+    if(lista[i]%2==0){
+      pares.add(lista[i]);
+    }
+  }
+  print("numeros pares: ");
+  print(pares);
+}
